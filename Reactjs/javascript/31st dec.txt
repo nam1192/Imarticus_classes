@@ -1,0 +1,155 @@
+ function identity(arr4) {
+  for (let i = 0; i < arr4.length; i++) 
+   {
+    for (let j = 0; j < arr4.length; j++)
+     {
+      if (arr4[i][j] !== 1 && i === j || arr4[i][j] && i !== j)
+      {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+console.log(identity([[1, 0, 0],  [0, 1, 0],  [0, 0, 1]]))
+console.log(identity([[1, 0, 1],  [0, 1, 0],  [0, 0, 1]]))
+console.log(identity([[1, 0, 55],  [0, 23, 0],  [91, 0, 1]]))
+console.log(identity([[1, 23, 4],  [5, 9, 64],  [71, 8, 0]]))
+
+
+
+
+
+
+
+
+
+// 3. WAP to perform sorting of below data based on id and name(create class, object and a method for sorting in util class)
+// {id:101,name:raj},
+// 	{id:121,name:rajesh},
+// 	{id:130,name:suraj},
+// 	{id:114,name:tom}
+
+class stud10{
+  constructor(id,name){
+    this.id = id;
+    this.name= name;
+  }
+//   myintro(){
+//     console.log(" name " +this.name+ " id no "+ this.id);
+//   }
+}
+
+stu1= new stud10[{id:101,name:'raj'},
+	{id:121,name:'rajesh'},
+	{id:130,name:'suraj'},
+	{id:114,name:'tom'}];
+stu1.sort(function(a,b) {
+  return a.id-b.id
+});
+
+// st1=new stud4(101,"raj");
+// st1.myintro();
+// st2=new stud4(121,"rajesh");
+// st2.myintro();
+// st3=new stud4(130,"suraj");
+// st3.myintro();
+// st4=new stud4(114,"tom");
+// st4.myintro();
+
+
+
+
+
+
+
+arr1 = [10,20,30,40,50,45,67];
+arr2 = [34,23,56,57,89,22,11];
+function even2(arr1, arr2){
+  arr3=[]
+  res=0
+for(i of arr1){
+  if(arr1[i]%2==0){
+    for(j of arr2){
+      if(arr2[j]%2==0){
+        res=i+j        
+        arr3.push(res)
+      }
+    }
+  return arr3
+}
+}
+}
+console.log(arr3);
+
+// // var r = [...arr1,...arr2]
+// // console.log(r);
+// var r1 = [arr1,arr2];
+// console.log(r1);
+
+// function even2(r){
+//   arr3 = r.filter(i => i%2==0);
+//   for(let i 0f arr3){
+//     arr3 += i
+//   }
+//   return arr3;
+// }
+
+// console.log(even2(r));
+
+
+
+
+
+
+
+
+
+
+
+// 1) Give third array which is addition of even items from both array.
+
+arr1 = [10,20,30,40,50,45,67];
+arr2 = [34,23,56,57,89,22,11];
+arr3=[];
+arr4=[];
+finalArr=[];
+function sumOfevenArrays(arr1,...arr)
+{
+ 	result =0;
+ 	for(i of arr1)
+    {
+     if(i % 2 == 0)
+       {
+        arr3.push(i);
+       }
+    }
+for(arg of arr)
+  {
+    for(i of arr2)
+  {
+   if(i%2==0)
+     {
+       arr4.push(i);
+     }
+  }
+ 
+  }
+	len=Math.min(arr3.length,arr4.length)
+  console.log("length= ",len)
+  let count =0;
+ 	while(count<len)
+    {
+      finalArr.push(arr3[count]+arr4[count]);
+      count++;
+    }
+	return finalArr;
+}
+
+
+console.log(sumOfevenArrays(arr1,arr2));
+
+
+
+
+

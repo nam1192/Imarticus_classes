@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+$("#b1").click(function(){
+
+ 
+    var prodname=$("#pname").val();
+    if(prodname.length!=0){
+    $('ol').append("<li>" + prodname + "</li>");
+   }
+   else{
+
+    alert("blank input not allowed");
+   }
+});
+$("#b2").click(function(){
+   // $("ol").append("<li>Mobiles</li>");
+    var prodname=$("#pname").val();
+    $('ol').prepend("<li>" + prodname + "</li>");
+});
+$('#b3').click(function(){
+
+    var i="<p>This is a para</p>";//create para using html
+
+   
+    $('body').append('<p>This is a para</p>');
+    // $('body').append(i); 
+
+    var j=$("<p></p>").text("this is created using <b>jquery</b>");
+
+    var m=$("<p></p>").html("this is created using <b>jquery</b>");
+    // $('body').append(j); 
+
+    var k=document.createElement("p");
+    k.innerHTML="This para is created using docuemnt.createElement() ";
+    // $('body').append(k); 
+
+$('body').append(i,j,k,m); 
+
+    
+});
+
+});
+
+       
+    </script>
+
+<style>
+    body{
+        padding: 5px;
+        margin: 0px;
+    }
+    .para{
+        background-color: plum;
+    }
+</style>
+</head>
+<body>
+<div style="background-color: aqua;width: auto;height: auto;">
+    <center>
+        <h1>Fruits</h1>
+    </center>
+</div>
+<h1>Fruits of India:</h1>
+<div class="para">
+<p id="intro"> India is the largest producer of Fruits in the world and is known as fruit basket of world. The national fruit of India is Mango.It is also called the King of fruits</p>
+<p>India is second largest fruit producer in the world, There are large variety of fruits grown in different geographical zones in India.</p>
+<p>In India, you can identify several seasonal fruits. Some of these fruits are readily available during the summer, while others are harvested and distributed primarily during the winter. Some fruits you can obtain as all-season fruits, which means they will be available all year. In this article, you will learn about the seasonal fruits in India and their benefits.</p>
+</div>
+<hr/>
+<input type=text id="pname" />
+
+<ol><li>Mango</li></ol>
+
+<label for="">Add After</label>
+<input type="radio" id="b1"value="Append Text">
+<label for="">Add Before</label>
+<input type="radio" id="b2"value="Prepend Text">
+
+</body>
+</html>

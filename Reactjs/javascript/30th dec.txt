@@ -1,0 +1,114 @@
+ODD EVEN ARRAY:
+
+// function evenodd(a){
+a=[11,23,12,24,56,3,4,78,55];
+even=[];
+  odd=[];
+for(i=0;i<a.length;i++)
+  {
+    if(a[i]%2==0)
+      {
+        even.push(a[i]);
+      }
+    else{
+      odd.push(a[i]);
+    }
+  }
+console.log(even);
+console.log(odd);
+
+// a=[11,23,12,24,56,3,4,78,55];
+
+
+
+
+
+ODD OR EVEN:
+
+function evenodd(a){
+even = a.filter(i => i%2==0);
+  odd = a.filter(i => i%2!=0);
+  
+  return {even,odd};
+}
+console.log(evenodd(a=[11,23,12,24,56,3,4,78,55]));
+
+// a=[11,23,12,24,56,3,4,78,55];
+
+
+
+
+
+GRADE: 
+
+function marks(m) {
+if(m<100 && m>90) {
+  console.log("Grade is A");
+}
+else if(m<90 && m>80) {
+  console.log("Grade is B");
+}
+else if(m<80 && m>70) {
+  console.log("Grade is C");
+}
+else {
+  console.log("Failed");
+}
+  return m;
+}
+marks(95);
+
+
+
+
+CALCULATOR :
+
+class calculator3{
+  constructor(a,b){
+  this.a = a;
+  this.b = b;
+
+}
+  
+addition(){
+  console.log(this.a+this.b);
+}
+
+  subtraction(){
+   
+  console.log(this.a-this.b);
+}
+  multiplication(){
+  console.log(this.a*this.b);
+}
+  division(){
+  console.log(this.a/this.b);
+}
+  
+}
+st1=new calculator3(20,2);
+st1.addition();
+st1.subtraction();
+st1.multiplication();
+st1.division();
+
+
+
+MAXIMUM MARKS
+
+var stu=[{id:101,name:'raj',cmarks:45,pmarks:55,mmarks:67},
+        {id:102,name:'rajesh',cmarks:65,pmarks:85,mmarks:77},
+        {id:103,name:'suraj',cmarks:43,pmarks:55,mmarks:60},
+        {id:104,name:'tom',cmarks:71,pmarks:65,mmarks:70}];
+var a=[]
+function cal(){
+  for(i=0; i<4;i++){
+    a[i]=stu[i].cmarks+stu[i].pmarks+stu[i].mmarks;
+    a[i]=a[i]/3;
+    if(a[i]>a[i-1]){
+      return i;
+    }
+  }
+}
+t=Math.max(cal());
+console.log(stu[t].name);

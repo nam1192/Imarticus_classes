@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Hello, world!</title>
+    <style>
+        body {
+            background-color: honeydew;
+        }
+
+        #box1 {
+            margin: 20px 0px 0px 317px;
+            box-shadow: 0 2px 6px 2px rgb(121, 121, 175);
+        }
+
+        #box2 {
+            display: flex;
+            padding: 10px;
+            margin: 20px 0px 0px 305px;
+            box-shadow: 0 2px 6px 2px rgb(121, 121, 175); 
+        }
+
+        #box3 {
+            display: flex;
+            padding: 10px;
+            margin: 20px 0px 0px 305px;
+            box-shadow: 0 2px 6px 2px rgb(121, 121, 175);
+        }
+
+        .project {
+            margin: 10px;
+        }
+
+        .project:hover {
+            box-shadow: 0 2px 6px 2px rgb(121, 121, 175);
+            /* box-shadow: 0 2px 6px 0 rgb(121, 121, 175), 0 4px 12px 0 rgb(150, 150, 206); */
+        }
+        .extra{
+            margin: 10px;
+        }
+        .extra:hover {
+            box-shadow: 0 2px 6px 2px rgb(121, 121, 175);
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('#box1').hide();
+            $('#box2').hide();
+            $('#box3').hide();
+            $('#heading1').hide();
+            $('#heading2').hide();
+
+
+            $('#box1').mouseenter(function () { $('#box1').show(); });
+            $('#box1').mouseleave(function () {
+                $('#box1').hide();
+            });
+            $('.mydetails').mouseover(function () {
+                $('#box1').show();
+                $('#pics').hide();
+            });
+
+            $('.mydetails').mouseout(function () {
+                $('#box1').hide();
+                $('#pics').show();
+            });
+
+
+            $('#box2').mouseenter(function () { $('#box2').show(); });
+            $('#box2').mouseleave(function () {
+                $('#box2').hide();
+            });
+            $('.myproj').mouseover(function () {
+                $('#box2').show();
+                $('#pics').hide();
+            });
+
+            $('.myproj').mouseout(function () {
+                $('#box2').hide();
+                $('#pics').show();
+            });
+
+
+
+            $('#box3').mouseenter(function () { $('#box3').show(); });
+            $('#box3').mouseleave(function () {
+                $('#box3').hide();
+            });
+            $('.myacti').mouseover(function () {
+                $('#box3').show();
+                $('#pics').hide();
+            });
+
+            $('.myacti').mouseout(function () {
+                $('#box3').hide();
+                $('#pics').show();
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1>My Introduction</h1>
+    <div id="Container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">About Me</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Click here
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item mydetails" href="">My Details</a></li>
+                                <li><a class="dropdown-item myproj" href="">Projects</a></li>
+                                <li><a class="dropdown-item myacti" href="">Extra-Curricular Activities</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    
+    <!-- My Details  -->
+    <div id="box1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col"></th>
+                    <th scope="col">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Name</td>
+                    <td>Namratha A Banakar</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Qualification</td>
+                    <td>BE</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Branch</td>
+                    <td>ECE</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>College</td>
+                    <td>PESIT</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Projects -->
+    <h4 id="heading1">Projects I've Done</h4>
+    <div id="box2">
+        <div class="project">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Axis Bank</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Login Page</h6>
+                    <p class="card-text">In this project we created a replica of axis bank internet banking webpage. It has a Login ID, Debit card ID and mPIN sectiomn on the same page.</p>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Shoppingkart</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Mobile Shopping website</h6>
+                    <p class="card-text">Here in this project we have created a sample mobile shopping website using only HTML</p>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Tom and Jerry</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Newspaper headlines</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Extra-Curricular Activities  -->
+    <h4 id="heading2">Extra-Curricular Activities</h4>
+    <div id="box3">
+        <div class="extra">
+            <div class="card" style="width: 18rem;">
+                <img src="music.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="extra">
+            <div class="card" style="width: 18rem;">
+                <img src="game2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="extra">
+            <div class="card" style="width: 18rem;">
+                <img src="cycle.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

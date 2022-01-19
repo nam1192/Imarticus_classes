@@ -1,0 +1,280 @@
+1)Create a Calculator component which will 
+accept values and operator as props, based on operatoe show only the desired result
+10,20,*
+
+
+function Calculation(props)
+{
+  let result =parseInt(props.a)+parseInt(props.b);
+  let result1 =parseInt(props.a)-parseInt(props.b);
+  let result2 =parseInt(props.a)*parseInt(props.b);
+  let result3 =parseInt(props.a)/parseInt(props.b);
+  return <h1>Calculation of {props.a} and {props.b}  add = {result} sub ={result1} mul = {result2} div = {result3}</h1>
+}
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Calculation a="10" b="20" />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+
+(OR)
+
+function Calc(props)
+{
+  let a = parseInt(props.a);
+  let b= parseInt(props.b);
+  var operator={
+
+    "+":function (a,b){return a+b},
+    "-":function (a,b){return a-b},
+    "*":function (a,b){return a*b},
+    "/":function (a,b){return a/b},
+
+  };
+  
+  return <>
+  <h1>Addition of {a} and {b} is {operator[props.add](a,b)}</h1>
+  <h1>Subtraction of {a} and {b} is {operator[props.sub](a,b)}</h1>
+  <h1>Multiplication of {a} and {b} is {operator[props.mul](a,b)}</h1>
+  <h1>Division of {a} and {b} is {operator[props.div](a,b)}</h1>
+  </>
+
+  
+}
+ReactDOM.render(
+    
+      <Calc a="10" b="20" add="+" sub="-" mul="*" div="/" />
+     ,
+    document.getElementById('root')
+  );
+
+
+---------------------------------------------------------
+
+
+
+2)Create a grading component which is accepting 3 subject marks
+
+
+function Calc(props){
+  let x=parseInt(props.a);
+  let y=parseInt(props.b);
+  let z=parseInt(props.c);
+  let result = (x + y + z)/3;
+  if (result>90){
+  return <h1> marks scored {props.a}, {props.b} and  {props.c} - A grade </h1>
+} else if (result>80){
+  return <h1> marks scored {props.a}, {props.b} and  {props.c} - B grade </h1>
+} else if (result>70){
+  return <h1> marks scored {props.a}, {props.b} and  {props.c} - c grade </h1>
+} else{ 
+  return <h1> marks scored {props.a}, {props.b} and  {props.c} - Fail </h1> }
+}
+ReactDOM.render(<Calc a="91" b="90" c="90"/>  , document.getElementById('root'));
+
+
+
+(OR)
+
+function Grading(props){
+  let maths = parseInt(props.a);
+  let cs = parseInt(props.b);
+  let english = parseInt(props.c);
+  return <h2> Grading,Marks obtained in Maths is {maths} <br></br> Marks obtained in cs is {cs} <br></br> Marks obtained in english is {english}</h2>
+}
+
+ReactDOM.render(
+  <Grading a="80" b="80" c="80"/>,
+  document.getElementById('root')
+);
+
+
+
+
+----------------------------------------------------------
+
+
+3) Create a Calculator component which will perform addition,sub,multi,div.
+accept values and operator as props, based on operatoe show only the desired result
+same programs using class based components and state
+
+
+class Calc extends React.Component{
+  constructor(props){
+    super(props);
+    this.a=parseInt(this.props.a);
+    this.b=parseInt(this.props.b);
+  }
+  render(){
+  return <div>
+  <h2>Addition = {this.a+this.b}</h2> 
+  <h2>Subtraction = {this.a-this.b}</h2> 
+  <h2>Multiplication = {this.a*this.b}</h2> 
+  <h2>Division = {this.a/this.b}</h2> 
+  </div>
+}
+}
+
+ReactDOM.render(
+    <Calc a="20" b="10" />,
+  document.getElementById('root')
+);
+
+
+(OR)
+
+
+class Calculator extends React.Component
+{
+  constructor()
+  {
+    super();
+    this.a=parseInt("20");
+    this.b=parseInt("10");
+  }
+
+  render()
+  {
+    return <>
+    <h1>Addition = {this.a+this.b}</h1>
+    <h1>Subtraction = {this.a-this.b}</h1>
+    <h1>Multiplication = {this.a*this.b}</h1>
+    <h1>Division = {this.a/this.b}</h1>
+    
+    </>
+  }
+}
+
+ReactDOM.render(
+  <Calculator />,
+  document.getElementById("root")
+);
+
+
+
+
+------------------------------------------------------
+
+
+
+
+//class based components in React
+//working with handlers
+
+class MySwitch extends React.Component{
+
+  constructor(props){
+    super(props);  
+    this.state = {isOn : true};    
+    this.myHandler = this.myHandler.bind(this);
+  }
+
+  myHandler(){
+    //how do we change the state
+    //this.state.isOn = false;
+    this.setState( i => (
+      {isOn: !i.isOn}
+    ));
+  }
+
+  render(){
+    const output = this.state.isOn;
+    console.log(output);
+    return (
+      <div>
+      <h1>This is result {output}</h1>
+      <button onClick={this.myHandler}>{this.state.isOn ? 'ON':'OFF'}</button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(  
+  <MySwitch /> ,
+document.getElementById('root')
+);
+
+ReactDOM.render(  
+  <MySwitch /> ,
+document.getElementById('root')
+);
+
+
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+
+//nested components
+
+function MyHello(props){
+  return <h1>Hi this is MyHello.</h1>
+}
+
+function YourHello(props){
+  return <h1>Hi this is YourHello.</h1>
+}
+
+function SayHello(props){
+  const display = props.isTrue;
+  console.log(display);
+
+  if(display){
+    return <MyHello />
+  }else{
+    return <YourHello />
+  }
+}
+
+ReactDOM.render(  
+  <SayHello isTrue={true} /> ,
+document.getElementById('root')
+);
+
+
+------------------------------------------------------
+
+4)take two images, based on click event change image
+
+
+class MySwitch extends React.Component{
+
+  constructor(props){
+    super(props);  
+    this.state = {isOn : true};    
+    this.myHandler = this.myHandler.bind(this);
+  }
+
+  myHandler(){
+    this.setState( i => (
+      {isOn: !i.isOn}
+    ));
+  }
+
+  render(){
+    return (
+      <div>
+      <h1>Click on the image to toggle</h1>
+      <button onClick={this.myHandler}>{this.state.isOn ? <img src="dog.jpg" width="300px" height="300px"/>:<img src="dog2.jpg" width="300px" height="300px"/>}</button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(  
+  <MySwitch /> ,
+document.getElementById('root')
+);
+
+
+
+
+---------------------------------------------------------
+
+

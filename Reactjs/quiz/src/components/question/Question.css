@@ -1,0 +1,10 @@
+.Content h1{
+    margin: 150px 500px 40px 500px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    color: #da1b18;
+    text-transform: none;
+    text-shadow: none;
+    text-align: left;
+}

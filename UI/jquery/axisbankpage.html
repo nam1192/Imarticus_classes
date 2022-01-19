@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AXIS BANK</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(231, 217, 243);
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+            color: maroon;
+        }
+        #bank {
+            width: 200px;
+            height: 150px;
+            border-radius: 30px;
+        }
+
+        h1 {
+            color: rgb(161, 7, 7);
+        }
+        
+        #tohide {
+            border: 6px solid rgba(170, 93, 93, 0.4);
+            height: 200px;
+            width: 500px;
+            background-color: cadetblue;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #tohide1 {
+            border: 6px solid rgba(170, 93, 93, 0.4);
+            height: 300px;
+            width: 550px;
+            background-color: cadetblue;
+        }
+
+        #tohide2 {
+            border: 6px solid rgba(170, 93, 93, 0.4);
+            height: 250px;
+            width: 500px;
+            background-color: cadetblue;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('#tohide').hide();
+
+
+            $('#showlogin').click(function () {
+                $('#tohide1').hide();
+                $('#tohide2').hide();
+                $('#tohide').show();
+                $('#p1').hide();
+
+            });
+
+        });
+
+        $(document).ready(function () {
+            $('#tohide1').hide();
+
+
+            $('#showlogin1').click(function () {
+                $('#tohide').hide();
+                $('#tohide2').hide();
+                $('#tohide1').show();
+                $('#p1').hide();
+            });
+
+        });
+
+        $(document).ready(function () {
+            $('#tohide2').hide();
+
+
+            $('#showlogin2').click(function () {
+                $('#tohide').hide();
+                $('#tohide1').hide();
+                $('#tohide2').show();
+                $('#p1').hide();
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <img id="bank" src="axis.jpg" alt="">
+        <h1>AXIS BANK | INTERNET BANKING</h1>
+        <br>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="">WELCOME TO AXIS BANK</a></li>
+            <li>
+                <a id="showlogin">Login ID</a>
+                <div id="tohide">
+                    <br>
+                    <form>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" placeholder="Email ID" id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" placeholder="Password" id="inputPassword3">
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="button">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </li>
+
+
+
+            <li>
+                <a id="showlogin1">Debit Card No.</a>
+                <div id="tohide1">
+                    <br>
+                    <form>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Card No.</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" placeholder="Card No" id="number">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">PIN No.</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" placeholder="PIN No" id="inputPassword3">
+                            </div>
+                        </div>
+
+                        <!-- <p>typrfg</p> -->
+                        <img src="captcha.jpg" width="80px" height="70px" alt="">
+                        <p>Type the text as shown above</p>
+                        <input type="text" placeholder="Enter Captcha" name="" id="" style="text-align: center;"> 
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="button">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </li>
+
+
+            <li>
+                <a id="showlogin2">mPIN</a>
+                <div id="tohide2">
+                    <br>
+                    <form>
+                        <fieldset class="row mb-3">
+                            <legend class="col-form-label col-sm-2 pt-0"></legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                        value="option1" checked>
+                                    <label class="form-check-label" for="gridRadios1">
+                                        Customer ID
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                        value="option2">
+                                    <label class="form-check-label" for="gridRadios2">
+                                        Mobile No
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label for="">Customer ID/ Mobile No:</label>
+                                    <input type="number" name="" placeholder="Customer ID/ Mobile No" id="">
+                                </div>
+                                <div>
+                                    <label for="">PIN No:</label> <br />
+                                    <input type="number" name="PIN No" placeholder="PIN No" id="">
+                                </div>
+                                <br/>
+                                <div class="d-grid gap-2 col-6 mx-auto">
+                                    <button class="btn btn-primary" type="button">Login</button>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </li>
+
+        </ul>
+        <br>
+        <p id="p1"><strong>Our Offerings:</strong> Express FD,Personal Loan, Car Loan,Home Loan, Savings Account,24x7
+            Loans, Credit Card, FD, FD Interest Rates, Education Loan, Current Account, Fastag, Trade & Forex, CMS, Tata
+            Health Insurance, ICICI Lombard General Insurance, Axis Pay,Axis Mobile, Internet Banking, PPF Account</p>
+
+
+</body>
+
+</html>

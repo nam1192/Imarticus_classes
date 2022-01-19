@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture</title>
+</head>
+<body>
+    <picture>
+        <!-- <source media="(min-width:850px)" srcset="lion.jpg"/> -->
+        <source media="(min-width:550px)" srcset="bird.jpg"/>
+        <source media="(min-width:450px)" srcset="carrom.jpg"/>
+        <img src="bird.jpg" alt="Bird image" style="width: auto;"/>
+    </picture>
+<br>
+    <video width="300" height="200" poster="lion.jpg" muted controls autoplay loop>
+        <source src="v1.mp4" type="video/mp4"/>
+        This video is not supported
+   </video>
+   <audio src="" controls autoplay>
+       <!-- <source src="m1.mp3" poster="" type="audio/mp3"/> -->
+   </audio>
+</body>
+</html>
